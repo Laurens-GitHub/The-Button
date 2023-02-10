@@ -1,63 +1,20 @@
 {
-  "type": "module",
-  "name": "the-button",
-  "description": "Button for wacky internet sounds",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@aws-crypto/sha256-browser": "^2.0.2",
-    "@aws-sdk/client-s3": "^3.216.0",
-    "@aws-sdk/s3-request-presigner": "^3.218.0",
-    "@aws-sdk/util-create-request": "^0.1.0-preview.6",
-    "@aws-sdk/util-format-url": "^0.1.0-preview.7",
-    "@testing-library/jest-dom": "^5.16.5",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
-    "buffer": "^6.0.3",
-    "fs": "^0.0.1-security",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-router-dom": "^6.4.3",
-    "react-s3": "^1.3.1",
-    "react-scripts": "^2.1.3",
-    "web-vitals": "^2.1.4"
-  },
-  "devDependencies": {
-    "@types/node": "^18.11.9"
-  },
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Laurens-GitHub/The-Button.git"
+    "start": "node index.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Laurens-GitHub/The-Button/issues"
-  },
-  "homepage": "https://github.com/Laurens-GitHub/The-Button#readme",
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "type": "module",
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.267.0",
+    "@aws-sdk/s3-request-presigner": "^3.267.0",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "node-fetch": "^3.3.0"
   }
 }
