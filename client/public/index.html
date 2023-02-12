@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
+    <link
+  rel="stylesheet"
+  href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+  integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+  crossorigin="anonymous"
+/>
+
+    <title>CRUD Application</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <div id="button">
+      <audio id="sound">
+        <source src="https://soundsforthebutton.s3.us-east-2.amazonaws.com/Samwise%20Potatoes.mp3?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA3SUBMNXXTMEZRBW6%2F20230212%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20230212T181812Z&X-Amz-Expires=36000&X-Amz-Signature=4f11cfba04098ae476765a2f2544865e6b37f939b5e042e2302c2500de74efad&X-Amz-SignedHeaders=host&x-id=GetObject" type="audio/mp3">
+      </audio>
+      <button onclick="document.getElementById('sound').play();">Play Sound</button>
+    </div>
+  </body>
+</html>
