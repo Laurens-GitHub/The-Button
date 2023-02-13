@@ -11,13 +11,53 @@ import { Button, Container, Card, Row } from 'react-bootstrap'
 // When the sound is loaded, enable the button.
 getRandomSound = () => {
   axios.get("/api/get")
-    .then((response) => {
-      this.setState({
-        fetchUrl: response.data
-      })
+    .then((response) => response.data)
+    .then((urlResponse) => {
+      const fetchUrl = urlResponse
+      return fetchUrl
     })
 }
 
+playState = () => {
+  this.setState({
+    idle: false,
+    disabled: true,
+  })
+}
+
+idleState = () => {
+  this.setState({
+    idle: true,
+    disabled: false,
+  })
+}
+
+loadButton = () => {
+  const [soundUrl, setSoundUrl] = React.useState('')
+
+    playSound = () => {
+    const fetchUrl = getRandomSound()
+    setSoundUrl(fetchUrl)
+
+  }
+  return (
+    <div>
+      <audio id="sound">
+        <source src={soundUrl} type="audio/mp3">
+        </source>
+      </audio>
+      <button onclick={document.getElementById('sound').play()}>Play Sound</button>
+    </div>
+
+  );
+}
+
+ReactDom.render(
+  <loadButton/>,
+  document.querySelector("#root")
+)
+
+// document.querySelector("#sound").addEventListener("ended", yourFunction, false);
 
 // class App extends Component {
 //   constructor(props) {
